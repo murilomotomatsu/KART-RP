@@ -1182,6 +1182,547 @@ a {
 }
 
 /* ═══════════════════════════════════════════════════════════ */
+/* ELO RANKING SYSTEM — PREMIUM GRID                         */
+/* ═══════════════════════════════════════════════════════════ */
+
+.elo-section {
+  background: var(--carbon);
+  position: relative;
+  overflow: hidden;
+}
+
+.elo-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(230, 0, 18, 0.04), transparent 60%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Elo Grid — 3 columns */
+.elo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+/* ─── Elo Card ─── */
+.elo-card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--carbon-border);
+  border-radius: 16px;
+  padding: 28px 22px 22px;
+  position: relative;
+  transition: all 0.45s var(--ease);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.elo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--elo-accent, #666);
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.elo-card:hover {
+  border-color: var(--elo-accent);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 40px color-mix(in srgb, var(--elo-accent) 15%, transparent);
+}
+
+.elo-card:hover::before {
+  opacity: 1;
+}
+
+/* Badge image */
+.elo-card-badge {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 14px;
+  position: relative;
+  animation: badgeFloat 4s ease-in-out infinite;
+}
+
+.elo-card-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
+  transition: all 0.4s var(--ease);
+}
+
+.elo-card:hover .elo-card-badge img {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 12px color-mix(in srgb, var(--elo-accent) 30%, transparent));
+}
+
+@keyframes badgeFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Tier label */
+.elo-card-tier {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 3px;
+  color: var(--grey);
+  margin-bottom: 4px;
+}
+
+/* Name */
+.elo-card-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--elo-accent);
+  margin-bottom: 2px;
+}
+
+/* Sub name */
+.elo-card-sub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--grey);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* Specs pills */
+.elo-card-specs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.elo-card-specs span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  font-size: 0.65rem;
+  color: var(--grey-light);
+  font-family: var(--font-mono);
+}
+
+.elo-card-specs strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* Description */
+.elo-card-desc {
+  font-size: 0.75rem;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+/* Tag badge */
+.elo-card-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--tag-color, #888) 12%, transparent);
+  color: var(--tag-color, #888);
+  border: 1px solid color-mix(in srgb, var(--tag-color, #888) 25%, transparent);
+}
+
+/* ─── Special tiers ─── */
+.elo-card-legendary {
+  border-color: color-mix(in srgb, var(--elo-accent) 20%, transparent);
+  background: linear-gradient(160deg,
+      color-mix(in srgb, var(--elo-accent) 5%, transparent),
+      rgba(255, 255, 255, 0.01));
+}
+
+.elo-card-apex {
+  border-color: rgba(255, 69, 0, 0.25);
+  background: linear-gradient(160deg, rgba(255, 69, 0, 0.06), rgba(255, 200, 0, 0.02), rgba(0, 0, 0, 0));
+}
+
+.elo-card-apex::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+      rgba(255, 69, 0, 0) 0%,
+      rgba(255, 69, 0, 0.08) 50%,
+      rgba(255, 200, 0, 0.04) 100%);
+  animation: apexShimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes apexShimmer {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ─── Highlights ─── */
+.elo-highlights {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.elo-hl-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--carbon-border);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  transition: all 0.3s var(--ease);
+}
+
+.elo-hl-card:hover {
+  border-color: rgba(230, 0, 18, 0.2);
+  transform: translateY(-2px);
+}
+
+.elo-hl-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.elo-hl-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.elo-hl-card p {
+  font-size: 0.65rem;
+  color: var(--grey-light);
+  line-height: 1.4;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .elo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .elo-highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .elo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elo-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .elo-card-badge {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+/* Vertical connecting line */
+.elo-tower::before {
+  content: '';
+  position: absolute;
+  left: 38px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,
+      #ff4500 0%, #b9f2ff 12%, #ff8c00 24%,
+      #666 36%, #e60012 48%, #9b30ff 60%,
+      #ffd700 72%, #1e90ff 84%, #00e676 100%);
+  opacity: 0.3;
+  border-radius: 1px;
+}
+
+/* Elo Card */
+.elo-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--gradient-card);
+  border: 1px solid var(--carbon-border);
+  border-radius: 14px;
+  position: relative;
+  transition: all 0.4s var(--ease);
+  z-index: 1;
+}
+
+.elo-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(6px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Badge wrap */
+.elo-badge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 56px;
+}
+
+.elo-badge {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: radial-gradient(circle, var(--elo-color, #666), transparent 80%);
+  box-shadow: 0 0 18px var(--elo-glow, rgba(100, 100, 100, 0.3));
+  animation: eloBadgePulse 3s ease-in-out infinite;
+}
+
+@keyframes eloBadgePulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px var(--elo-glow);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 24px var(--elo-glow);
+    transform: scale(1.05);
+  }
+}
+
+.elo-rank {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  color: var(--grey);
+}
+
+/* Elo Info */
+.elo-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.elo-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.elo-badge-name {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--grey);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.elo-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.elo-spec {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  font-size: 0.68rem;
+  color: var(--grey-light);
+  font-family: var(--font-mono);
+}
+
+.elo-spec strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.elo-desc {
+  font-size: 0.78rem;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+.elo-desc strong {
+  color: var(--white);
+}
+
+/* Tags */
+.elo-tag {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.elo-tag-legendary {
+  background: rgba(255, 69, 0, 0.15);
+  color: #ff4500;
+  border: 1px solid rgba(255, 69, 0, 0.3);
+}
+
+.elo-tag-esport {
+  background: rgba(185, 242, 255, 0.1);
+  color: #b9f2ff;
+  border: 1px solid rgba(185, 242, 255, 0.2);
+}
+
+.elo-tag-danger {
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.elo-tag-start {
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  border: 1px solid rgba(0, 230, 118, 0.2);
+}
+
+/* Special tier cards */
+.elo-apex {
+  border-color: rgba(255, 69, 0, 0.25);
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.06), var(--carbon-light));
+}
+
+.elo-apex::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg,
+      rgba(255, 69, 0, 0) 0%,
+      rgba(255, 69, 0, 0.1) 50%,
+      rgba(255, 200, 0, 0.05) 100%);
+  animation: apexShimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes apexShimmer {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.elo-immortal {
+  border-color: rgba(185, 242, 255, 0.15);
+  background: linear-gradient(135deg, rgba(185, 242, 255, 0.04), var(--carbon-light));
+}
+
+.elo-entry {
+  border-color: rgba(0, 230, 118, 0.15);
+}
+
+/* Elo Highlights Grid */
+.elo-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.elo-hl-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--carbon-border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: all 0.3s var(--ease);
+}
+
+.elo-hl-card:hover {
+  border-color: rgba(230, 0, 18, 0.2);
+  transform: translateY(-3px);
+}
+
+.elo-hl-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.elo-hl-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.elo-hl-card p {
+  font-size: 0.8rem;
+  color: var(--grey-light);
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
 /* VIEWS SECTION                                             */
 /* ═══════════════════════════════════════════════════════════ */
 
