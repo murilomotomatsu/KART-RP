@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/* Three.js 3D RACING SIMULATION — KART RP                   */
+/* Three.js 3D RACING SIMULATION — APEX                      */
 /* Complex circuit + realistic kart models                    */
 /* ═══════════════════════════════════════════════════════════ */
 
