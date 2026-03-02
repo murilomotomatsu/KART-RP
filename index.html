@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KART RP — The Future of Karting Entertainment</title>
+  <meta name="description"
+    content="O kartódromo mais avançado do mundo. Tecnologia de ponta, experiência familiar premium e modelo de entretenimento motorsport escalável globalmente. Invista no futuro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                             -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">KART RP</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">O Projeto</a></li>
+        <li><a href="#technology">Tecnologia</a></li>
+        <li><a href="#views">Experiência</a></li>
+        <li><a href="#immersive">Imersão</a></li>
+        <li><a href="#business">Negócio</a></li>
+        <li><a href="#techstack">Stack</a></li>
+        <li><a href="#invest" class="nav-cta">Invest Now</a></li>
+      </ul>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- HERO SECTION                                           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-racing-lines"></div>
+    <div class="hero-content">
+      <div class="hero-badge fade-up">
+        <span class="badge-dot"></span>
+        A NEW ERA IN MOTORSPORT ENTERTAINMENT
+      </div>
+      <h1 class="hero-title fade-up delay-1">
+        THE FUTURE OF<br />
+        <span class="hero-highlight">KARTING</span><br />
+        ENTERTAINMENT
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        Onde a <strong>Fórmula 1</strong> encontra a <strong>Disney World</strong>.<br />
+        Tecnologia de ponta. Experiência familiar premium. Escala global.
+      </p>
+      <div class="hero-cta-group fade-up delay-3">
+        <a href="#invest" class="btn btn-primary btn-glow">
+          <span class="btn-icon">💰</span> Invest Now
+        </a>
+        <a href="#views" class="btn btn-outline">
+          <span class="btn-icon">🎬</span> Experience Live
+        </a>
+      </div>
+      <div class="hero-brands fade-up delay-4">
+        <span class="brand-label">INSPIRED BY</span>
+        <div class="brand-list">
+          <span>FORMULA 1</span>
+          <span class="brand-sep">×</span>
+          <span>24H LE MANS</span>
+          <span class="brand-sep">×</span>
+          <span>DISNEY</span>
+          <span class="brand-sep">×</span>
+          <span>TESLA</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>SCROLL TO EXPLORE</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- ABOUT SECTION                                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">01 — O PROJETO</span>
+        <h2 class="section-title">Mais do que um kartódromo.<br /><span class="text-gradient">Uma revolução.</span></h2>
+        <p class="section-desc">Um complexo de entretenimento motorsport com arquitetura icônica, tecnologia de
+          transmissão em tempo real e modelo de negócio escalável globalmente.</p>
+      </div>
+
+      <div class="about-stats fade-up">
+        <div class="stat-card">
+          <div class="stat-number" data-count="5">0</div>
+          <div class="stat-label">Traçados<br />Modulares</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="360">0</div>
+          <div class="stat-suffix">°</div>
+          <div class="stat-label">Mirante<br />Panorâmico</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="2500">0</div>
+          <div class="stat-label">Capacidade<br />de Público</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-count="40">0</div>
+          <div class="stat-suffix">M+</div>
+          <div class="stat-label">Receita Anual<br />Projetada (R$)</div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card fade-up">
+          <div class="card-icon">🏁</div>
+          <h3>Pista Multi-Layout</h3>
+          <p>5 traçados modulares que se reconfiguram para oferecer experiências diferentes a cada visita. De iniciantes
+            a pilotos profissionais.</p>
+        </div>
+        <div class="about-card fade-up">
+          <div class="card-icon">🏗️</div>
+          <h3>Arquitetura Icônica</h3>
+          <p>Design inspirado nos melhores autódromos do mundo com elevações, curvas de alta velocidade e iluminação LED
+            cinematográfica.</p>
+        </div>
+        <div class="about-card fade-up">
+          <div class="card-icon">🍽️</div>
+          <h3>Mirante 360° Premium</h3>
+          <p>Restaurante panorâmico no topo do mirante central. Gastronomia premium enquanto assiste às corridas ao
+            vivo.</p>
+        </div>
+        <div class="about-card fade-up">
+          <div class="card-icon">👨‍👩‍👧‍👦</div>
+          <h3>Família no Centro</h3>
+          <p>Cada familiar acompanha seu piloto em tempo real pelo celular. Câmeras, telemetria e ranking ao vivo.</p>
+        </div>
+        <div class="about-card fade-up">
+          <div class="card-icon">📡</div>
+          <h3>Broadcast Profissional</h3>
+          <p>Sistema de transmissão nível F1 com câmeras onboard, aérea, tracking inteligente e overlay de dados em
+            tempo real.</p>
+        </div>
+        <div class="about-card fade-up">
+          <div class="card-icon">🌍</div>
+          <h3>Modelo Franqueável</h3>
+          <p>Arquitetura modular, tecnologia proprietária e marca forte. Pronto para franquia internacional.</p>
+        </div>
+      </div>
+
+      <div class="about-image-showcase fade-up">
+        <img src="/images/track-aerial.png" alt="Vista aérea do kartódromo" class="showcase-img" loading="lazy" />
+        <div class="showcase-overlay">
+          <span class="showcase-label">VISTA AÉREA — CONCEITO ARQUITETÔNICO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TECHNOLOGY SECTION                                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="technology" class="section tech-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">02 — TECNOLOGIA</span>
+        <h2 class="section-title">Acompanhamento em<br /><span class="text-gradient">Tempo Real</span></h2>
+        <p class="section-desc">Cada kart equipado com GPS de alta precisão, telemetria, câmera onboard e RFID. A
+          família acompanha tudo pelo celular.</p>
+      </div>
+
+      <div class="tech-dashboard fade-up">
+        <div class="dashboard-header">
+          <div class="dash-status">
+            <span class="status-dot live"></span>
+            LIVE — CORRIDA #247
+          </div>
+          <div class="dash-timer">LAP 12/15</div>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Pilot Info -->
+          <div class="dash-card pilot-card">
+            <div class="pilot-avatar">👤</div>
+            <div class="pilot-info">
+              <h4>PEDRO SILVA</h4>
+              <span class="pilot-kart">KART #07</span>
+            </div>
+            <div class="pilot-position">
+              <span class="pos-number">P2</span>
+              <span class="pos-label">POSIÇÃO</span>
+            </div>
+          </div>
+
+          <!-- Speed Gauge -->
+          <div class="dash-card speed-card">
+            <div class="speed-ring">
+              <svg viewBox="0 0 120 120" class="speed-svg">
+                <circle cx="60" cy="60" r="54" class="speed-bg"></circle>
+                <circle cx="60" cy="60" r="54" class="speed-fill" style="--speed: 78;"></circle>
+              </svg>
+              <div class="speed-value">
+                <span class="speed-num" id="live-speed">78</span>
+                <span class="speed-unit">km/h</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lap Times -->
+          <div class="dash-card laps-card">
+            <h4>TEMPOS DE VOLTA</h4>
+            <div class="lap-row best">
+              <span class="lap-label">MELHOR</span>
+              <span class="lap-time">0:47.382</span>
+            </div>
+            <div class="lap-row current">
+              <span class="lap-label">ATUAL</span>
+              <span class="lap-time" id="live-lap">0:48.127</span>
+            </div>
+            <div class="lap-row">
+              <span class="lap-label">ÚLTIMA</span>
+              <span class="lap-time">0:49.551</span>
+            </div>
+            <div class="lap-row">
+              <span class="lap-label">DELTA</span>
+              <span class="lap-time delta-pos">+0.745</span>
+            </div>
+          </div>
+
+          <!-- G-Force -->
+          <div class="dash-card gforce-card">
+            <h4>G-FORCE</h4>
+            <div class="gforce-display">
+              <div class="gforce-circle">
+                <div class="gforce-dot" id="gforce-dot"></div>
+                <div class="gforce-crosshair"></div>
+              </div>
+              <div class="gforce-values">
+                <span>LAT: <strong id="gforce-lat">0.8G</strong></span>
+                <span>LON: <strong id="gforce-lon">0.3G</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini Track Map -->
+          <div class="dash-card map-card">
+            <h4>POSIÇÃO NA PISTA</h4>
+            <div class="mini-track">
+              <svg viewBox="0 0 300 200" class="track-svg">
+                <path
+                  d="M50,100 C50,40 120,20 150,20 C200,20 220,50 240,70 C260,90 270,120 250,150 C230,180 180,180 150,180 C100,180 50,160 50,100Z"
+                  class="track-path" fill="none" stroke="#333" stroke-width="12" stroke-linecap="round" />
+                <path
+                  d="M50,100 C50,40 120,20 150,20 C200,20 220,50 240,70 C260,90 270,120 250,150 C230,180 180,180 150,180 C100,180 50,160 50,100Z"
+                  class="track-path-active" fill="none" stroke="url(#trackGrad)" stroke-width="4"
+                  stroke-linecap="round" />
+                <defs>
+                  <linearGradient id="trackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#e60012" />
+                    <stop offset="100%" stop-color="#ff6b35" />
+                  </linearGradient>
+                </defs>
+                <!-- Kart dots -->
+                <circle cx="150" cy="20" r="6" fill="#e60012" class="kart-dot kart-main">
+                  <animate attributeName="cx" values="150;240;250;150;50;50;150" dur="8s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="20;70;150;180;100;100;20" dur="8s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="240" cy="70" r="4" fill="#666" class="kart-dot">
+                  <animate attributeName="cx" values="240;250;150;50;50;150;240" dur="8s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="70;150;180;100;100;20;70" dur="8s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="50" cy="100" r="4" fill="#666" class="kart-dot">
+                  <animate attributeName="cx" values="50;150;240;250;150;50;50" dur="8s" repeatCount="indefinite" />
+                  <animate attributeName="cy" values="100;20;70;150;180;100;100" dur="8s" repeatCount="indefinite" />
+                </circle>
+              </svg>
+              <div class="map-legend">
+                <span class="legend-dot main"></span> SEU PILOTO
+                <span class="legend-dot"></span> OUTROS
+              </div>
+            </div>
+          </div>
+
+          <!-- Ranking -->
+          <div class="dash-card ranking-card">
+            <h4>RANKING AO VIVO</h4>
+            <div class="ranking-list">
+              <div class="rank-row">
+                <span class="rank-pos">1</span>
+                <span class="rank-name">Lucas M.</span>
+                <span class="rank-gap">—</span>
+              </div>
+              <div class="rank-row highlight">
+                <span class="rank-pos">2</span>
+                <span class="rank-name">Pedro S. ⭐</span>
+                <span class="rank-gap">+1.2s</span>
+              </div>
+              <div class="rank-row">
+                <span class="rank-pos">3</span>
+                <span class="rank-name">Ana R.</span>
+                <span class="rank-gap">+3.8s</span>
+              </div>
+              <div class="rank-row">
+                <span class="rank-pos">4</span>
+                <span class="rank-name">João K.</span>
+                <span class="rank-gap">+5.1s</span>
+              </div>
+              <div class="rank-row">
+                <span class="rank-pos">5</span>
+                <span class="rank-name">Maria L.</span>
+                <span class="rank-gap">+7.4s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-features">
+        <div class="tech-feature fade-up">
+          <div class="feature-icon">📍</div>
+          <h4>GPS Alta Precisão</h4>
+          <p>Rastreamento centimétrico RTK com atualização a 20Hz</p>
+        </div>
+        <div class="tech-feature fade-up">
+          <div class="feature-icon">📊</div>
+          <h4>Telemetria Completa</h4>
+          <p>Velocidade, G-Force, RPM, tempo de volta em tempo real</p>
+        </div>
+        <div class="tech-feature fade-up">
+          <div class="feature-icon">🎥</div>
+          <h4>Câmera Onboard</h4>
+          <p>Streaming HD em cada kart via WebRTC</p>
+        </div>
+        <div class="tech-feature fade-up">
+          <div class="feature-icon">🔖</div>
+          <h4>RFID Identification</h4>
+          <p>Cada piloto identificado automaticamente ao entrar no kart</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- VIEWS SECTION                                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="views" class="section views-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">03 — EXPERIÊNCIA</span>
+        <h2 class="section-title">Múltiplas Visões.<br /><span class="text-gradient">Total Imersão.</span></h2>
+        <p class="section-desc">Quatro ângulos de câmera para que a família nunca perca um momento. Tecnologia broadcast
+          de nível profissional.</p>
+      </div>
+
+      <div class="views-tabs fade-up">
+        <button class="view-tab active" data-view="aerial">
+          <span class="tab-icon">🛰️</span>
+          <span class="tab-label">Vista Aérea</span>
+        </button>
+        <button class="view-tab" data-view="mirante">
+          <span class="tab-icon">🍽️</span>
+          <span class="tab-label">Mirante 360°</span>
+        </button>
+        <button class="view-tab" data-view="onboard">
+          <span class="tab-icon">🏎️</span>
+          <span class="tab-label">Onboard</span>
+        </button>
+        <button class="view-tab" data-view="pilot">
+          <span class="tab-icon">👤</span>
+          <span class="tab-label">Piloto</span>
+        </button>
+      </div>
+
+      <div class="views-content fade-up">
+        <!-- Aerial View -->
+        <div class="view-panel active" id="view-aerial">
+          <div class="view-visual">
+            <img src="/images/track-aerial.png" alt="Vista Aérea Interativa" loading="lazy" />
+            <div class="view-hud">
+              <div class="hud-item">🔴 LIVE</div>
+              <div class="hud-item">12 KARTS ATIVOS</div>
+              <div class="hud-item">LAP 12/15</div>
+            </div>
+          </div>
+          <div class="view-info">
+            <h3>Vista Aérea Interativa</h3>
+            <p>Mapa 3D da pista com todos os karts se movendo em tempo real. Clique em qualquer kart para abrir seus
+              dados de telemetria, câmera e posição.</p>
+            <ul class="view-features">
+              <li>Mapa 3D renderizado com Three.js</li>
+              <li>Posição em tempo real via GPS RTK</li>
+              <li>Clique no kart → dados completos</li>
+              <li>Zoom e rotação livre</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mirante View -->
+        <div class="view-panel" id="view-mirante">
+          <div class="view-visual">
+            <img src="/images/mirante-restaurant.png" alt="Câmera do Mirante" loading="lazy" />
+            <div class="view-hud">
+              <div class="hud-item">🔴 LIVE</div>
+              <div class="hud-item">MIRANTE 360°</div>
+              <div class="hud-item">PREMIUM LOUNGE</div>
+            </div>
+          </div>
+          <div class="view-info">
+            <h3>Câmera do Mirante</h3>
+            <p>A vista premium do restaurante panorâmico. Famílias assistindo às corridas ao vivo enquanto desfrutam de
+              gastronomia de alto nível. Telões gigantes com dados em tempo real.</p>
+            <ul class="view-features">
+              <li>Restaurante 360° panorâmico</li>
+              <li>Telões com corrida ao vivo</li>
+              <li>Ambiente premium climatizado</li>
+              <li>Vista completa da pista</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Onboard View -->
+        <div class="view-panel" id="view-onboard">
+          <div class="view-visual">
+            <img src="/images/onboard-view.png" alt="Câmera Onboard" loading="lazy" />
+            <div class="view-hud">
+              <div class="hud-item">🔴 LIVE</div>
+              <div class="hud-item">ONBOARD CAM</div>
+              <div class="hud-item">KART #07</div>
+            </div>
+          </div>
+          <div class="view-info">
+            <h3>Onboard do Kart</h3>
+            <p>Câmera HD presa ao kart capturando a perspectiva do piloto. Overlay digital com velocímetro, tempo de
+              volta e posição na corrida.</p>
+            <ul class="view-features">
+              <li>Câmera HD 1080p a 60fps</li>
+              <li>Overlay com velocímetro digital</li>
+              <li>Tempo de volta em tempo real</li>
+              <li>Streaming via WebRTC</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pilot View -->
+        <div class="view-panel" id="view-pilot">
+          <div class="view-visual">
+            <img src="/images/pilot-closeup.png" alt="Câmera do Piloto" loading="lazy" />
+            <div class="view-hud">
+              <div class="hud-item">🔴 LIVE</div>
+              <div class="hud-item">EMOTION CAM</div>
+              <div class="hud-item">FACE TRACKING</div>
+            </div>
+          </div>
+          <div class="view-info">
+            <h3>Câmera do Piloto</h3>
+            <p>Câmera frontal capturando a expressão e emoção do piloto. Momento de alegria, concentração e adrenalina —
+              captação emocional em alta definição.</p>
+            <ul class="view-features">
+              <li>Câmera frontal no capacete</li>
+              <li>Captação emocional AI-powered</li>
+              <li>Highlight automático de reações</li>
+              <li>Compartilhamento instantâneo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- IMMERSIVE 3D SECTION                                   -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="immersive" class="section immersive-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">04 — SIMULAÇÃO AO VIVO</span>
+        <h2 class="section-title">Assista a Corrida<br /><span class="text-gradient">Em Tempo Real</span></h2>
+        <p class="section-desc">Acompanhe o piloto Pedro Silva (Kart #07) correndo em nossa pista. Alterne entre 6
+          câmeras profissionais e sinta a adrenalina.</p>
+      </div>
+
+      <div class="immersive-3d-wrapper fade-up">
+        <div class="camera-selector">
+          <button class="cam-btn active" id="btn-cam-chase">🏁 Chase Cam</button>
+          <button class="cam-btn" id="btn-cam-onboard">🎥 Onboard</button>
+          <button class="cam-btn" id="btn-cam-aerial">🛰️ Aérea</button>
+          <button class="cam-btn" id="btn-cam-mirante">🍽️ Mirante</button>
+          <button class="cam-btn" id="btn-cam-cinematic">🎬 Cinematic</button>
+          <button class="cam-btn" id="btn-cam-trackside">📷 Trackside</button>
+          <button class="cam-btn auto-btn" id="btn-auto-cycle">▶ AUTO</button>
+        </div>
+        <div class="canvas-container" style="height: 600px;">
+          <canvas id="track-3d-canvas"></canvas>
+        </div>
+      </div>
+
+      <div class="immersive-features">
+        <div class="imm-card fade-up">
+          <div class="imm-icon">🌐</div>
+          <h4>Pista 3D Navegável</h4>
+          <p>Explore cada curva, elevação e setor da pista em uma experiência 3D interativa completa.</p>
+        </div>
+        <div class="imm-card fade-up">
+          <div class="imm-icon">🤖</div>
+          <h4>Highlights com IA</h4>
+          <p>Inteligência artificial identifica os melhores momentos automaticamente: ultrapassagens, recordes e
+            reações.</p>
+        </div>
+        <div class="imm-card fade-up">
+          <div class="imm-icon">🔄</div>
+          <h4>Replay de Corridas</h4>
+          <p>Reveja qualquer corrida completa com múltiplos ângulos de câmera e dados de telemetria sobrepostos.</p>
+        </div>
+        <div class="imm-card fade-up">
+          <div class="imm-icon">📱</div>
+          <h4>Social Sharing</h4>
+          <p>Compartilhe highlights, tempos de volta e vídeos onboard diretamente nas redes sociais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- BUSINESS MODEL SECTION                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="business" class="section business-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">05 — MODELO DE NEGÓCIO</span>
+        <h2 class="section-title">7 Fontes de Receita.<br /><span class="text-gradient">Uma Máquina.</span></h2>
+        <p class="section-desc">Modelo diversificado de receita com altíssima margem e potencial de escala global via
+          franquia.</p>
+      </div>
+
+      <div class="revenue-grid">
+        <div class="revenue-card fade-up">
+          <div class="rev-icon">🏎️</div>
+          <h4>Receita por Corrida</h4>
+          <p>R$ 89-149 por bateria de 15 min. Capacidade de 300+ corridas/dia.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 85%;">
+              <span>35% da receita</span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue-card fade-up">
+          <div class="rev-icon">🍽️</div>
+          <h4>Restaurante Premium</h4>
+          <p>Gastronomia no mirante 360°. Ticket médio R$ 120/pessoa.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 55%;">
+              <span>20% da receita</span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue-card fade-up">
+          <div class="rev-icon">🏢</div>
+          <h4>Eventos Corporativos</h4>
+          <p>Team building, lançamentos, confraternizações. R$ 15-50k/evento.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 45%;">
+              <span>15% da receita</span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue-card fade-up">
+          <div class="rev-icon">📺</div>
+          <h4>Transmissão Paga</h4>
+          <p>Pacote família R$ 29/mês para acesso ilimitado a câmeras e replays.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 35%;">
+              <span>10% da receita</span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue-card fade-up">
+          <div class="rev-icon">🏅</div>
+          <h4>Patrocínio</h4>
+          <p>Espaços publicitários premium em pista, karts, telões e plataforma digital.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 30%;">
+              <span>8% da receita</span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue-card fade-up">
+          <div class="rev-icon">🏟️</div>
+          <h4>Naming Rights</h4>
+          <p>Naming rights do complexo e setores individuais da pista. Contratos anuais.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 25%;">
+              <span>7% da receita</span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue-card featured fade-up">
+          <div class="rev-icon">🌍</div>
+          <h4>Franquia Internacional</h4>
+          <p>Modelo replicável. Fee de R$ 2M + royalties 5%. Meta: 50 unidades em 10 anos.</p>
+          <div class="rev-bar">
+            <div class="rev-fill" style="--width: 20%;">
+              <span>5% da receita</span>
+            </div>
+          </div>
+          <div class="featured-badge">ESCALABILIDADE GLOBAL</div>
+        </div>
+      </div>
+
+      <!-- Financial Projection -->
+      <div class="projection-section fade-up">
+        <h3 class="projection-title">Projeção de Crescimento (5 anos)</h3>
+        <div class="chart-container">
+          <div class="chart-bar" style="--height: 25%;">
+            <div class="bar-fill"></div>
+            <span class="bar-label">ANO 1</span>
+            <span class="bar-value">R$ 12M</span>
+          </div>
+          <div class="chart-bar" style="--height: 45%;">
+            <div class="bar-fill"></div>
+            <span class="bar-label">ANO 2</span>
+            <span class="bar-value">R$ 28M</span>
+          </div>
+          <div class="chart-bar" style="--height: 60%;">
+            <div class="bar-fill"></div>
+            <span class="bar-label">ANO 3</span>
+            <span class="bar-value">R$ 45M</span>
+          </div>
+          <div class="chart-bar" style="--height: 80%;">
+            <div class="bar-fill"></div>
+            <span class="bar-label">ANO 4</span>
+            <span class="bar-value">R$ 78M</span>
+          </div>
+          <div class="chart-bar" style="--height: 100%;">
+            <div class="bar-fill"></div>
+            <span class="bar-label">ANO 5</span>
+            <span class="bar-value">R$ 120M+</span>
+          </div>
+        </div>
+        <p class="projection-note">* Inclui receita de franquias a partir do Ano 3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TECH STACK SECTION                                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="techstack" class="section stack-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">06 — ARQUITETURA</span>
+        <h2 class="section-title">Stack Tecnológica<br /><span class="text-gradient">de Ponta</span></h2>
+        <p class="section-desc">Infraestrutura robusta, escalável e pronta para suportar milhares de usuários
+          simultâneos com latência mínima.</p>
+      </div>
+
+      <!-- Architecture Visual -->
+      <div class="arch-diagram fade-up">
+        <div class="arch-layer">
+          <div class="arch-label">DISPOSITIVOS</div>
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <span class="node-icon">🏎️</span>
+              <span>GPS/RFID/Câmera</span>
+            </div>
+            <div class="arch-node">
+              <span class="node-icon">📱</span>
+              <span>Mobile App</span>
+            </div>
+            <div class="arch-node">
+              <span class="node-icon">💻</span>
+              <span>Web Platform</span>
+            </div>
+            <div class="arch-node">
+              <span class="node-icon">📺</span>
+              <span>Telões/Displays</span>
+            </div>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="connector-line"></div>
+          <span class="connector-label">WebSocket + WebRTC</span>
+        </div>
+        <div class="arch-layer">
+          <div class="arch-label">APLICAÇÃO</div>
+          <div class="arch-nodes">
+            <div class="arch-node highlight">
+              <span class="node-icon">⚛️</span>
+              <span>Next.js / React</span>
+            </div>
+            <div class="arch-node highlight">
+              <span class="node-icon">🎮</span>
+              <span>Three.js 3D</span>
+            </div>
+            <div class="arch-node highlight">
+              <span class="node-icon">📡</span>
+              <span>WebRTC Stream</span>
+            </div>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="connector-line"></div>
+          <span class="connector-label">REST API + GraphQL</span>
+        </div>
+        <div class="arch-layer">
+          <div class="arch-label">BACKEND</div>
+          <div class="arch-nodes">
+            <div class="arch-node">
+              <span class="node-icon">🟢</span>
+              <span>Node.js</span>
+            </div>
+            <div class="arch-node">
+              <span class="node-icon">🐘</span>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="arch-node">
+              <span class="node-icon">⚡</span>
+              <span>Redis Cache</span>
+            </div>
+          </div>
+        </div>
+        <div class="arch-connector">
+          <div class="connector-line"></div>
+          <span class="connector-label">Auto-Scaling</span>
+        </div>
+        <div class="arch-layer">
+          <div class="arch-label">INFRAESTRUTURA</div>
+          <div class="arch-nodes">
+            <div class="arch-node aws">
+              <span class="node-icon">☁️</span>
+              <span>AWS Cloud</span>
+            </div>
+            <div class="arch-node aws">
+              <span class="node-icon">🔐</span>
+              <span>CloudFront CDN</span>
+            </div>
+            <div class="arch-node aws">
+              <span class="node-icon">🤖</span>
+              <span>AI/ML Pipeline</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-cards">
+        <div class="stack-card fade-up">
+          <div class="stack-icon">⚛️</div>
+          <h4>Next.js / React</h4>
+          <p>Frontend SSR de alta performance com renderização otimizada e SEO nativo.</p>
+        </div>
+        <div class="stack-card fade-up">
+          <div class="stack-icon">🎮</div>
+          <h4>Three.js</h4>
+          <p>Visualização 3D interativa da pista com tracking em tempo real dos karts.</p>
+        </div>
+        <div class="stack-card fade-up">
+          <div class="stack-icon">📡</div>
+          <h4>WebRTC</h4>
+          <p>Streaming de vídeo ponto-a-ponto de ultra-baixa latência das câmeras onboard.</p>
+        </div>
+        <div class="stack-card fade-up">
+          <div class="stack-icon">🟢</div>
+          <h4>Node.js</h4>
+          <p>Backend event-driven para processamento em tempo real de telemetria e WebSocket.</p>
+        </div>
+        <div class="stack-card fade-up">
+          <div class="stack-icon">🐘</div>
+          <h4>PostgreSQL</h4>
+          <p>Banco de dados relacional robusto para dados de corrida, pilotos e analytics.</p>
+        </div>
+        <div class="stack-card fade-up">
+          <div class="stack-icon">☁️</div>
+          <h4>AWS</h4>
+          <p>Infraestrutura global auto-escalável com 99.99% de uptime garantido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- INVESTMENT SECTION                                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <section id="invest" class="section invest-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">07 — INVESTIMENTO</span>
+        <h2 class="section-title">Junte-se à<br /><span class="text-gradient">Revolução</span></h2>
+        <p class="section-desc">Não é apenas um kartódromo. É um novo modelo global de entretenimento motorsport. Seja
+          parte desta história.</p>
+      </div>
+
+      <div class="invest-highlights fade-up">
+        <div class="invest-stat">
+          <div class="invest-number">R$ 120M+</div>
+          <div class="invest-label">Receita Ano 5</div>
+        </div>
+        <div class="invest-stat">
+          <div class="invest-number">680%</div>
+          <div class="invest-label">ROI Projetado</div>
+        </div>
+        <div class="invest-stat">
+          <div class="invest-number">50+</div>
+          <div class="invest-label">Franquias Meta</div>
+        </div>
+        <div class="invest-stat">
+          <div class="invest-number">$2B+</div>
+          <div class="invest-label">Mercado Global</div>
+        </div>
+      </div>
+
+      <!-- Roadmap -->
+      <div class="roadmap fade-up">
+        <h3 class="roadmap-title">Roadmap de Implementação</h3>
+        <div class="roadmap-timeline">
+          <div class="roadmap-item">
+            <div class="roadmap-marker active"></div>
+            <div class="roadmap-content">
+              <h4>Q1-Q2 2026</h4>
+              <p>Captação de investimento • Projeto arquitetônico • Licenças</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-marker"></div>
+            <div class="roadmap-content">
+              <h4>Q3-Q4 2026</h4>
+              <p>Construção civil • Desenvolvimento da plataforma • Testes de hardware</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-marker"></div>
+            <div class="roadmap-content">
+              <h4>Q1 2027</h4>
+              <p>Soft launch • Beta da plataforma • Treinamento de equipe</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-marker"></div>
+            <div class="roadmap-content">
+              <h4>Q2 2027</h4>
+              <p>Grand Opening • Marketing agressivo • Operação plena</p>
+            </div>
+          </div>
+          <div class="roadmap-item">
+            <div class="roadmap-marker"></div>
+            <div class="roadmap-content">
+              <h4>2028+</h4>
+              <p>Expansão franquias • 2ª unidade própria • App mobile nativo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="invest-cta fade-up">
+        <div class="cta-card">
+          <h3>Pronto para investir no futuro?</h3>
+          <p>Entre em contato com nossa equipe de relações com investidores para receber o pitch deck completo e agendar
+            uma apresentação.</p>
+          <div class="cta-buttons">
+            <a href="mailto:investors@balanaagulha.com" class="btn btn-primary btn-glow btn-large">
+              <span class="btn-icon">📧</span> Receber Pitch Deck
+            </a>
+            <a href="#" class="btn btn-outline btn-large">
+              <span class="btn-icon">📅</span> Agendar Apresentação
+            </a>
+          </div>
+          <div class="trust-signals">
+            <span>🔒 NDA Disponível</span>
+            <span>📊 Due Diligence Pronta</span>
+            <span>⚖️ Estrutura Jurídica Completa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- FOOTER                                                 -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">KART RP</span>
+          <p class="footer-tagline">The Future of Karting Entertainment</p>
+        </div>
+        <div class="footer-links">
+          <h4>Plataforma</h4>
+          <a href="#about">O Projeto</a>
+          <a href="#technology">Tecnologia</a>
+          <a href="#views">Experiência</a>
+          <a href="#immersive">Imersão 3D</a>
+        </div>
+        <div class="footer-links">
+          <h4>Investidor</h4>
+          <a href="#business">Modelo de Negócio</a>
+          <a href="#techstack">Arquitetura</a>
+          <a href="#invest">Investir</a>
+          <a href="mailto:investors@balanaagulha.com">Contato</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+          <a href="#">NDA</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 KART RP Motorsport Entertainment. Todos os direitos reservados.</p>
+        <p class="footer-powered">Powered by Innovation ⚡</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
